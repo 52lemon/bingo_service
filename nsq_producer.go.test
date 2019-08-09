@@ -1,0 +1,8 @@
+package main
+
+import "bingo_service/servers"
+
+func main()  {
+	// 发送消息到nsq
+	servers.Producer("hello world!!!")
+}

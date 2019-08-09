@@ -1,0 +1,47 @@
+basePath: '{{.BasePath}}'
+host: localhost:9000
+info:
+  contact:
+    email: jin-chunguang@foxmail.com
+    name: jinchunguang
+  description: go web 骨架.
+  license: {}
+  termsOfService: http://swagger.io/terms/
+  title: bingo_service
+  version: "1.0"
+paths:
+  /ping:
+    get:
+      consumes:
+      - application/x-json-stream
+      summary: 默认页面
+  /user:
+    post:
+      consumes:
+      - application/json
+      description: 增加用户
+      parameters:
+      - description: string valid
+        in: query
+        name: Name
+        type: string
+      - description: int valid
+        in: query
+        name: Age
+        type: integer
+      produces:
+      - application/json
+  /user/:
+    delete:
+      consumes:
+      - application/json
+      description: 删除用户
+      parameters:
+      - description: 用户id
+        in: query
+        name: Id
+        required: true
+        type: string
+      produces:
+      - application/json
+swagger: "2.0"
